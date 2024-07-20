@@ -18,4 +18,7 @@ Route::get('logout', [Controller::class,'logout'])->name('logout');
 Route::get('home', function(){ return view('customer/homepage'); })->name('homepage');
 
 // Guest Purchaser
-Route::get('order-product-guest', function (){ return view('guest/buy'); })->name('guestPurchaser');
+Route::get('order-product-guest/{pid}', function (){ return view('guest/buy'); })->name('guestPurchaser');
+
+// Admin
+Route::get('admin/dashboard', function () { return view('admin/dashboard'); });

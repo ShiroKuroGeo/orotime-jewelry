@@ -23,6 +23,11 @@
                                             <label for="floatingfullname">Full Name</label>
                                         </div>
                                         <div class="form-floating mt-3">
+                                            <input type="email" class="form-control" id="purchaseemail"
+                                                placeholder="email">
+                                            <label for="floatingemail">Email Address</label>
+                                        </div>
+                                        <div class="form-floating mt-3">
                                             <input type="number" class="form-control" id="purchaseNumber"
                                                 placeholder="number">
                                             <label for="floatingNumber">(+63) </label>
@@ -71,6 +76,8 @@
                                             <div class="accordion-body p-0 pt-3 pt-md-4">
                                                 <h3 class="fs-sm mb-2">Full Name</h3>
                                                 <p class="fs-sm" id="fullnameEntered"></p>
+                                                <h3 class="fs-sm mb-2">Email Address</h3>
+                                                <p class="fs-sm" id="emailAddressEntered"></p>
                                                 <h3 class="fs-sm mb-2">Phone Number</h3>
                                                 <p class="fs-sm" id="phoneEntered"></p>
                                             </div>
@@ -82,17 +89,16 @@
                         </div>
 
                         {{-- Shipping Address --}}
-                        <div class="d-flex align-items-start visually-hidden" id="shipping">
+                        <div class="d-flex align-items-start" id="shipping">
                             <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
                                 style="width: 2rem; height: 2rem; margin-top: -.125rem">2</div>
                             <div class="w-100 ps-3 ps-md-4">
                                 <h1 class="h5 mb-md-4">Shipping address</h1>
                                 <form class="needs-validation" novalidate="">
-                                    <div class="row row-cols-1 row-cols-sm-2 g-3 g-sm-4 mb-4">
-                                        <div class="col">
-                                            <label for="shipping-email" class="form-label">Address</label>
-                                            <input type="email" class="form-control form-control-lg"
-                                                id="shipping-email" required="">
+                                    <div class="row g-3 g-sm-4 mb-4">
+                                        <div class="col-12">
+                                            <label for="shipping-email" class="form-label">Street Address</label>
+                                            <textarea name="streetAddress" id="streetAddress" class="form-control" cols="10" rows="1"></textarea>
                                         </div>
                                         <div class="col">
                                             <label for="shipping-mobile" class="form-label">Address</label>
@@ -129,7 +135,7 @@
                         </div>
 
                         {{-- Payment Method --}}
-                        <div class="d-flex align-items-start visually-hidden" id="paymentM">
+                        <div class="d-flex align-items-start" id="paymentM">
                             <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
                                 style="width: 2rem; height: 2rem; margin-top: -.125rem">3</div>
                             <div class="w-100 ps-3 ps-md-4">
@@ -272,22 +278,14 @@
 
 </x-app>
 <script>
-    var prGuestFn = $('#purchaseFullname').val();
-    var prGuestPn = $('#purchaseNumber').val();
-    var inputPCI = $('#inputPCI');
-    var PCIInformation = $('#PCIInformation');
-    var pciguest = $('#pciguest');
-    var shipping = $('#shipping');
-    var paymentM = $('#paymentM');
-
     $('#cInformationCheck').click(function() {
         if ($('#purchaseFullname').val() != '' && $('#purchaseNumber').val() != '') {
             $('#inputPCI').addClass('visually-hidden');
             $('#PCIInformation').removeClass('visually-hidden');
-            $('#shipping').removeClass('visually-hidden');
 
             $('#fullnameEntered').html($('#purchaseFullname').val());
             $('#phoneEntered').html($('#purchaseNumber').val());
+            $('#emailAddressEntered').html($('#purchaseemail').val());
         }
     })
 

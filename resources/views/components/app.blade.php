@@ -13,10 +13,9 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="{{ asset('css/theme.min.css') }}" type="text/css">
-    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
-<body class="">
+<body >
     <div class="bg-orotime">
         <div class="container-fluid ps-lg-5 ps-4 py-1">
             <span class="pe-2">

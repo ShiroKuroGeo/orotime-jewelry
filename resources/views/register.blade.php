@@ -85,7 +85,7 @@
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white bg-opacity-25 border border-white border-opacity-50 rounded-4 d-none-dark"></span>
                                         <span
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white border rounded-4 d-none d-block-dark"
-                                            style="--cz-bg-opacity: .05"></span>
+                                            style="--c-oro-bg-opacity: .05"></span>
                                         <div class="card-body position-relative z-2">
                                             <div class="d-inline-flex position-relative text-info p-3">
                                                 <span
@@ -110,7 +110,7 @@
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white bg-opacity-25 border border-white border-opacity-50 rounded-4 d-none-dark"></span>
                                         <span
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white border rounded-4 d-none d-block-dark"
-                                            style="--cz-bg-opacity: .05"></span>
+                                            style="--c-oro-bg-opacity: .05"></span>
                                         <div class="card-body position-relative z-2">
                                             <div class="d-inline-flex position-relative text-info p-3">
                                                 <span
@@ -135,7 +135,7 @@
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white bg-opacity-25 border border-white border-opacity-50 rounded-4 d-none-dark"></span>
                                         <span
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white border rounded-4 d-none d-block-dark"
-                                            style="--cz-bg-opacity: .05"></span>
+                                            style="--c-oro-bg-opacity: .05"></span>
                                         <div class="card-body position-relative z-2">
                                             <div class="d-inline-flex position-relative text-info p-3">
                                                 <span
@@ -162,7 +162,7 @@
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white bg-opacity-25 border border-white border-opacity-50 rounded-4 d-none-dark"></span>
                                         <span
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white border rounded-4 d-none d-block-dark"
-                                            style="--cz-bg-opacity: .05"></span>
+                                            style="--c-oro-bg-opacity: .05"></span>
                                         <div class="card-body position-relative z-2">
                                             <div class="d-inline-flex position-relative text-info p-3">
                                                 <span
@@ -189,7 +189,7 @@
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white bg-opacity-25 border border-white border-opacity-50 rounded-4 d-none-dark"></span>
                                         <span
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white border rounded-4 d-none d-block-dark"
-                                            style="--cz-bg-opacity: .05"></span>
+                                            style="--c-oro-bg-opacity: .05"></span>
                                         <div class="card-body position-relative z-2">
                                             <div class="d-inline-flex position-relative text-info p-3">
                                                 <span
@@ -214,7 +214,7 @@
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white bg-opacity-25 border border-white border-opacity-50 rounded-4 d-none-dark"></span>
                                         <span
                                             class="position-absolute top-0 start-0 w-100 h-100 bg-white border rounded-4 d-none d-block-dark"
-                                            style="--cz-bg-opacity: .05"></span>
+                                            style="--c-oro-bg-opacity: .05"></span>
                                         <div class="card-body position-relative z-2">
                                             <div class="d-inline-flex position-relative text-info p-3">
                                                 <span
