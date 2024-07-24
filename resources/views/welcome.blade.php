@@ -3,50 +3,13 @@
     <main class="container-fluid px-lg-5 px-4">
         <section class="position-relative">
             <div class="container-fluid pt-md-5 py-xl-0" data-aos="zoom-in">
-                <div class="row align-items-center justify-content-center">
-                    <video class="w-100 h-100 rounded" autoplay loop muted>
+                <div class="row align-items-center">
+                    <video class="w-100 h-100" autoplay loop muted>
                         <source src="{{ asset('video/jewelryvideo.mp4') }}" type="video/mp4" />
                     </video>
                 </div>
             </div>
         </section>
-
-
-        {{-- <section class="position-relative">
-            <div class="bg-body-tertiary position-absolute top-50 start-0 w-100 translate-middle-y overflow-hidden d-none d-xl-block"
-                style="height: 78%;">
-                <div class="bg-white opacity-75 d-none-dark"
-                    style="width: 699px; height: 728px; border-radius: 728px; filter: blur(151px)"></div>
-                <div class="bg-body opacity-75 d-none d-block-dark"
-                    style="width: 699px; height: 728px; border-radius: 728px; filter: blur(151px)"></div>
-            </div>
-            <div class="bg-body-tertiary position-absolute top-0 start-0 w-100 h-100 overflow-hidden d-xl-none">
-                <div class="position-absolute ps-xl-4 ms-xxl-5 mt-n2">
-                    <div class="bg-white opacity-75 d-none-dark"
-                        style="width: 699px; height: 728px; border-radius: 728px; filter: blur(151px)"></div>
-                    <div class="bg-body opacity-75 d-none d-block-dark"
-                        style="width: 699px; height: 728px; border-radius: 728px; filter: blur(151px)"></div>
-                </div>
-            </div>
-            <div class="container position-relative z-2 pb-5 pt-4 pt-md-5 py-xl-0">
-                <div class="row align-items-center justify-content-center pb-2 pb-sm-3 pb-md-0">
-                    <div class="col-9 col-sm-7 col-md-6 mb-3 mb-sm-4 mb-md-0">
-                        <video class="w-100" autoplay loop muted>
-                            <source src="{{ asset('video/jewelryvideo.mp4') }}" type="video/mp4" />
-                        </video>
-                    </div>
-                    <div class="col-md-6 col-xl-5 offset-xl-1 text-center">
-                        <div class="ps-4 ps-xl-0">
-                            <h2 class="h1 fw-bold">Orotime Italian Trend Jewelry</h2>
-                            <p class="fs-lg mb-4">Discover the allure of Italian trend jewelry, where timeless elegance
-                                meets modern sophistication, crafted to captivate with every detail.</p>
-                            <button class="btn btn-primary col-5">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
-
 
         <section class="container-fluid my-lg-5 my-5 py-lg-3 py-2">
             <div class="row row-cols-2 row-cols-md-4 g-3">
@@ -135,9 +98,9 @@
                     <div class="hover-effect-scale">
                         <h2 class="h2 d-flex w-100 pb-2 mb-1">
                             <a class="animate-underline animate-target text-primary d-inline text-truncate"
-                                href="#">Necklaces</a>
+                                href="{{ route('CategoryProduct', ['cat' => 'necklaces']) }}">Necklaces</a>
                         </h2>
-                        <a class="d-block bg-body-tertiary rounded mb-4" href="#">
+                        <a class="d-block bg-body-tertiary rounded mb-4" href="{{ route('CategoryProduct', ['cat' => 'necklaces']) }}">
                             <div class="ratio" style="--c-oro-aspect-ratio: calc(184 / 258 * 100%)">
                                 <img src="{{ asset('images/orotime-images/necklace.jpg') }}"
                                     class="hover-effect-target rounded" alt="Necklaces">
@@ -150,9 +113,9 @@
                     <div class="hover-effect-scale">
                         <h2 class="h2 d-flex w-100 pb-2 mb-1">
                             <a class="animate-underline animate-target text-primary d-inline text-truncate"
-                                href="#">Earrings</a>
+                                href="{{ route('CategoryProduct', ['cat' => 'earrings']) }}">Earrings</a>
                         </h2>
-                        <a class="d-block bg-body-tertiary rounded mb-4" href="#">
+                        <a class="d-block bg-body-tertiary rounded mb-4" href="{{ route('CategoryProduct', ['cat' => 'earrings']) }}">
                             <div class="ratio" style="--c-oro-aspect-ratio: calc(184 / 258 * 100%)">
                                 <img src="{{ asset('images/orotime-images/earring.jpg') }}"
                                     class="hover-effect-target rounded" alt="Earrings">
@@ -165,9 +128,9 @@
                     <div class="hover-effect-scale">
                         <h2 class="h2 d-flex w-100 pb-2 mb-1">
                             <a class="animate-underline animate-target text-primary d-inline text-truncate"
-                                href="#">Rings</a>
+                                href="{{ route('CategoryProduct', ['cat' => 'rings']) }}">Rings</a>
                         </h2>
-                        <a class="d-block bg-body-tertiary rounded mb-4" href="#">
+                        <a class="d-block bg-body-tertiary rounded mb-4" href="{{ route('CategoryProduct', ['cat' => 'rings']) }}">
                             <div class="ratio" style="--c-oro-aspect-ratio: calc(184 / 258 * 100%)">
                                 <img src="{{ asset('images/orotime-images/ring.jpg') }}"
                                     class="hover-effect-target rounded" alt="Rings">
@@ -180,9 +143,9 @@
                     <div class="hover-effect-scale">
                         <h2 class="h2 d-flex w-100 pb-2 mb-1">
                             <a class="animate-underline animate-target text-primary d-inline text-truncate"
-                                href="#">Bracelets</a>
+                                href="{{ route('CategoryProduct', ['cat' => 'bracelets']) }}">Bracelets</a>
                         </h2>
-                        <a class="d-block bg-body-tertiary rounded mb-4" href="#">
+                        <a class="d-block bg-body-tertiary rounded mb-4" href="{{ route('CategoryProduct', ['cat' => 'bracelets']) }}">
                             <div class="ratio" style="--c-oro-aspect-ratio: calc(184 / 258 * 100%)">
                                 <img src="{{ asset('images/orotime-images/bracelet.jpg') }}"
                                     class="hover-effect-target rounded" alt="Bracelets">
@@ -204,7 +167,7 @@
                 <div class="col" data-aos="fade-up">
                     <div class="product-card animate-underline hover-effect-opacity bg-body">
                         <div class="position-relative">
-                            <a class="d-block rounded-top overflow-hidden" href="#">
+                            <a class="d-block rounded-top overflow-hidden" href="{{ route('viewProduct', ['pid' => '1']) }}">
                                 <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
                                     <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt="Ring">
                                 </div>
@@ -234,7 +197,7 @@
                 <div class="col" data-aos="fade-up">
                     <div class="product-card animate-underline hover-effect-opacity bg-body">
                         <div class="position-relative">
-                            <a class="d-block rounded-top overflow-hidden" href="#">
+                            <a class="d-block rounded-top overflow-hidden" href="{{ route('viewProduct', ['pid' => '2']) }}">
                                 <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
                                     <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt="Ring">
                                 </div>
@@ -264,7 +227,7 @@
                 <div class="col" data-aos="fade-up">
                     <div class="product-card animate-underline hover-effect-opacity bg-body">
                         <div class="position-relative">
-                            <a class="d-block rounded-top overflow-hidden" href="#">
+                            <a class="d-block rounded-top overflow-hidden" href="{{ route('viewProduct', ['pid' => '3']) }}">
                                 <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
                                     <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt="Ring">
                                 </div>
@@ -294,7 +257,7 @@
                 <div class="col" data-aos="fade-up">
                     <div class="product-card animate-underline hover-effect-opacity bg-body">
                         <div class="position-relative">
-                            <a class="d-block rounded-top overflow-hidden" href="#">
+                            <a class="d-block rounded-top overflow-hidden" href="{{ route('viewProduct', ['pid' => '4']) }}">
                                 <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
                                     <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt="Ring">
                                 </div>
@@ -324,7 +287,7 @@
                 <div class="col" data-aos="fade-up">
                     <div class="product-card animate-underline hover-effect-opacity bg-body">
                         <div class="position-relative">
-                            <a class="d-block rounded-top overflow-hidden" href="#">
+                            <a class="d-block rounded-top overflow-hidden" href="{{ route('viewProduct', ['pid' => '5']) }}">
                                 <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
                                     <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt="Ring">
                                 </div>
@@ -354,7 +317,7 @@
                 <div class="col" data-aos="fade-up">
                     <div class="product-card animate-underline hover-effect-opacity bg-body">
                         <div class="position-relative">
-                            <a class="d-block rounded-top overflow-hidden" href="#">
+                            <a class="d-block rounded-top overflow-hidden" href="{{ route('viewProduct', ['pid' => '6']) }}">
                                 <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
                                     <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt="Ring">
                                 </div>
@@ -384,7 +347,7 @@
                 <div class="col" data-aos="fade-up">
                     <div class="product-card animate-underline hover-effect-opacity bg-body">
                         <div class="position-relative">
-                            <a class="d-block rounded-top overflow-hidden" href="#">
+                            <a class="d-block rounded-top overflow-hidden" href="{{ route('viewProduct', ['pid' => '7']) }}">
                                 <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
                                     <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt="Ring">
                                 </div>
@@ -414,7 +377,7 @@
                 <div class="col" data-aos="fade-up">
                     <div class="product-card animate-underline hover-effect-opacity bg-body">
                         <div class="position-relative">
-                            <a class="d-block rounded-top overflow-hidden" href="#">
+                            <a class="d-block rounded-top overflow-hidden" href="{{ route('viewProduct', ['pid' => '8']) }}">
                                 <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
                                     <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt="Ring">
                                 </div>

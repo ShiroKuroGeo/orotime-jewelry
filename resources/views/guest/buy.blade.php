@@ -6,7 +6,7 @@
                 <div class="col-lg-8 col-xl-7 mb-5 mb-lg-0">
                     <div class="d-flex flex-column gap-5 pe-xl-0">
                         {{-- Personal Contact --}}
-                        <div class="d-flex align-items-start" id="pciguest">
+                        <div class="d-flex align-items-start" id="pciguestCollapse">
                             <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
                                 style="width: 2rem; height: 2rem; margin-top: -.125rem">1</div>
                             <div class="flex-grow-0 flex-shrink-0 ps-3 ps-md-4" style="width: calc(100% - 2rem)">
@@ -34,8 +34,9 @@
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-lg btn-primary w-100 mt-3" id="cInformationCheck"
-                                        type="button">
+                                    <button class="btn btn-lg btn-primary w-100 mt-3" disabled id="btnPCI"
+                                        data-bs-toggle="collapse" href="#shippingCollapse" role="button"
+                                        aria-expanded="false" aria-controls="shippingCollapse" type="button">
                                         Continue
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
@@ -50,7 +51,8 @@
                                     <div class="d-flex align-items-center justify-content-center bg-body-secondary text-dark-emphasis rounded-circle flex-shrink-0"
                                         style="width: 2rem; height: 2rem; margin-top: -.125rem">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-file-person-fill text-primary" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-file-person-fill text-primary"
+                                            viewBox="0 0 16 16">
                                             <path
                                                 d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2m-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11" />
                                         </svg>
@@ -89,24 +91,26 @@
                         </div>
 
                         {{-- Shipping Address --}}
-                        <div class="d-flex align-items-start" id="shipping">
+                        <div class="d-flex align-items-start">
                             <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
                                 style="width: 2rem; height: 2rem; margin-top: -.125rem">2</div>
-                            <div class="w-100 ps-3 ps-md-4">
+                            <div class="w-100 ps-3 ps-md-4 collapse" id="shippingCollapse">
                                 <h1 class="h5 mb-md-4">Shipping address</h1>
                                 <form class="needs-validation" novalidate="">
                                     <div class="row g-3 g-sm-4 mb-4">
                                         <div class="col-12">
-                                            <label for="shipping-email" class="form-label">Street Address</label>
-                                            <textarea name="streetAddress" id="streetAddress" class="form-control" cols="10" rows="1"></textarea>
+                                            <label for="shipping-email" class="form-label">Country</label>
+                                            {{-- <textarea name="streetAddress" id="streetAddress" class="form-control" cols="10" rows="1"></textarea> --}}
+                                            <input type="text" name="countryAddress" id="countryAddress"
+                                                class="form-control">
                                         </div>
                                         <div class="col">
-                                            <label for="shipping-mobile" class="form-label">Address</label>
+                                            <label for="shipping-mobile" class="form-label">Province</label>
                                             <input type="text" class="form-control form-control-lg"
                                                 id="shipping-mobile">
                                         </div>
                                         <div class="col">
-                                            <label for="shipping-mobile" class="form-label">Address</label>
+                                            <label for="shipping-mobile" class="form-label">City</label>
                                             <input type="text" class="form-control form-control-lg"
                                                 id="shipping-mobile">
                                         </div>
@@ -122,7 +126,9 @@
                                         <input type="text" class="form-control form-control-lg"
                                             id="shipping-address" required="">
                                     </div>
-                                    <button class="btn btn-lg btn-primary w-100" type="button">
+                                    <button class="btn btn-lg btn-primary w-100" type="button"
+                                        data-bs-toggle="collapse" href="#paymentCollapse" role="button"
+                                        aria-expanded="false" aria-controls="paymentCollapse" type="button">
                                         Continue
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
@@ -135,34 +141,20 @@
                         </div>
 
                         {{-- Payment Method --}}
-                        <div class="d-flex align-items-start" id="paymentM">
+                        <div class="d-flex align-items-start">
                             <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
                                 style="width: 2rem; height: 2rem; margin-top: -.125rem">3</div>
-                            <div class="w-100 ps-3 ps-md-4">
+                            <div class="w-100 ps-3 ps-md-4 collapse" id="paymentCollapse">
                                 <h2 class="h5 mb-0">Payment</h2>
                                 <div class="mb-4" id="paymentMethod" role="list">
 
                                     <div class="mt-4">
-                                        <div class="form-check mb-0" role="listitem" data-bs-toggle="collapse"
-                                            data-bs-target="#cash" aria-expanded="false" aria-controls="cash">
+                                        <div class="form-check mb-0">
                                             <label class="form-check-label w-100 text-dark-emphasis fw-semibold">
                                                 <input type="radio" class="form-check-input fs-base me-2 me-sm-3"
                                                     name="payment-method">
                                                 Cash on delivery
                                             </label>
-                                        </div>
-                                        <div class="collapse" id="cash" data-bs-parent="#paymentMethod">
-                                            <div
-                                                class="d-sm-flex align-items-center pt-3 pt-sm-4 pb-2 ps-3 ms-2 ms-sm-3">
-                                                <span class="fs-sm me-3">I would require a change from:</span>
-                                                <div class="input-group mt-2 mt-sm-0" style="max-width: 150px">
-                                                    <span class="input-group-text fw-bold">
-                                                        &#8369;
-                                                    </span>
-                                                    <input type="number" class="form-control"
-                                                        aria-label="Amount (to the nearest dollar)">
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
 
@@ -185,36 +177,39 @@
                                             </label>
                                         </div>
                                         <div class="collapse show" id="card" data-bs-parent="#paymentMethod">
-                                            <form class="needs-validation pt-4 pb-2 ps-3 ms-2 ms-sm-3" novalidate="">
 
-                                                <div class="position-relative mb-3 mb-sm-4">
-                                                    <select name="cardselect" id="cardselect"
-                                                        class="form-select form-control-lg">
-                                                        <option selected hidden>Select Card</option>
-                                                        <option value="Amex">Amex</option>
-                                                        <option value="Master Card">Master Card</option>
-                                                        <option value="Visa">Visa</option>
-                                                    </select>
-                                                    <input type="text"
-                                                        class="form-control form-control-lg form-icon-end mt-3"
-                                                        placeholder="Card number" required="">
+                                            <div class="position-relative mb-3 mb-sm-4">
+                                                <select name="cardselect" id="cardselect"
+                                                    class="form-select form-control-lg">
+                                                    <option selected hidden>Select Card</option>
+                                                    <option value="Amex">Amex</option>
+                                                    <option value="Master Card">Master Card</option>
+                                                    <option value="Visa">Visa</option>
+                                                </select>
+                                                <input type="text"
+                                                    class="form-control form-control-lg form-icon-end mt-3"
+                                                    placeholder="Card number" required="">
+                                            </div>
+
+                                            <div class="row row-cols-1 row-cols-sm-2 g-3 g-sm-4">
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-lg"
+                                                        placeholder="MM/YY">
                                                 </div>
-
-                                                <div class="row row-cols-1 row-cols-sm-2 g-3 g-sm-4">
-                                                    <div class="col">
-                                                        <input type="text" class="form-control form-control-lg"
-                                                            placeholder="MM/YY">
-                                                    </div>
-                                                    <div class="col">
-                                                        <input type="text" class="form-control form-control-lg"
-                                                            maxlength="4" placeholder="CVC">
-                                                    </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control form-control-lg"
+                                                        maxlength="4" placeholder="CVC">
                                                 </div>
+                                            </div>
 
-                                            </form>
                                         </div>
                                     </div>
                                 </div>
+
+                                <select name="paymentMethod" id="paymentMethod">
+                                    <option value="">Flexi Pay</option>
+                                    <option value=""></option>
+                                </select>
 
                                 <textarea class="form-control form-control-lg mb-4" rows="3" placeholder="Additional comments"></textarea>
 
@@ -230,7 +225,6 @@
                                 <button class="btn btn-lg btn-primary w-100 d-none d-lg-flex">Pay P2,406.90</button>
                             </div>
                         </div>
-                        </form>
                     </div>
                 </div>
 
@@ -278,20 +272,19 @@
 
 </x-app>
 <script>
-    $('#cInformationCheck').click(function() {
-        if ($('#purchaseFullname').val() != '' && $('#purchaseNumber').val() != '') {
-            $('#inputPCI').addClass('visually-hidden');
-            $('#PCIInformation').removeClass('visually-hidden');
-
-            $('#fullnameEntered').html($('#purchaseFullname').val());
-            $('#phoneEntered').html($('#purchaseNumber').val());
-            $('#emailAddressEntered').html($('#purchaseemail').val());
-        }
+    $(document).ready(function() {
+        enPnReady();
     })
 
-    $('#inputPCIEdit').click(function() {
-        $('#inputPCI').removeClass('visually-hidden');
-        $('#PCIInformation').addClass('visually-hidden');
-        $('#shipping').addClass('visually-hidden');
-    })
+    const enPnReady = () => {
+        $('#purchaseFullname').on('keyup keydown', function() {
+            $('#purchaseNumber').on('keyup keydown', function() {
+                if ($('#purchaseFullname').val() != '' && $('#purchaseNumber').val() != '') {
+                    $('#btnPCI').prop('disabled', false);
+                } else {
+                    $('#btnPCI').prop('disabled', true);
+                }
+            })
+        })
+    }
 </script>
